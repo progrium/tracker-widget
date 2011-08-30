@@ -1,0 +1,42 @@
+Pivotal Tracker Widget
+======================
+
+Generates a page that lists stories from Pivotal Tracker based on iteration (done, current, backlog) 
+or search query (label:"label name", state:unstarted, etc) intended to be embedded via iframe.
+
+Code at http://github.com/progrum/tracker-widget
+Hosted at https://tracker-widget.appspot.com 
+
+Any accepted pull requests will get deployed.
+
+Pivotal Tracker Setup
+---------------------
+1) Be sure to enable API access in your project settings
+2) You should create a user that has only viewing privileges
+3) Note your project ID
+
+Widget URLs
+-----------
+
+https://tracker-widget.appspot.com/widget/iteration
+ Required query parameters:
+    username    
+    password    
+    project_id  
+    iteration   
+        values: "done", "current", "backlog"
+
+ Optional query parameter:
+    css         URL of CSS to use instead of Twitter Bootstrap
+
+https://tracker-widget.appspot.com/widget/stories
+ Required query parameters:
+    username    
+    password    
+    project_id  
+    filter   
+        see: https://www.pivotaltracker.com/help#howcanasearchberefined
+
+ Optional query parameter:
+    css         URL of CSS to use instead of Twitter Bootstrap
+        

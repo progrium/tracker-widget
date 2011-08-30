@@ -16,7 +16,7 @@ def stories_for_view(stories):
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
-        self.response.out.write('Hello world!')
+        self.response.out.write('<pre>%s</pre>' % open('README').read())
 
 class StoryWidgetHandler(webapp.RequestHandler):
     def get(self):
