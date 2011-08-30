@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{css|default:"http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.1.min.css"}}" />
+  </head>
+  <body>
+    <table class="zebra-striped" width="100%">
+      {% for story in stories %}
+      <tr><td><a href="#">{{story.name}}</a> ({{story.owner}})</td><td><span style="float: right;">{{story.labels}}</span></td></tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
