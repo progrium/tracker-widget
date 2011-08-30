@@ -9,7 +9,7 @@ from pytracker import HostedTrackerAuth
 def stories_for_view(stories):
   return [dict(
     name=s.name,
-    owner=''.join([n[0] for n in s.owned_by.split(' ')]),
+    owner=(''.join([n[0] for n in s.owned_by.split(' ')]) if s.owned_by else ''),
     labels=(', '.join(list(s.labels))) if s.labels else '') 
     for s in stories]
 

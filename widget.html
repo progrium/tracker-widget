@@ -5,7 +5,7 @@
   <body>
     <table class="zebra-striped" width="100%">
       {% for story in stories %}
-      <tr><td><a href="#">{{story.name}}</a> ({{story.owner}})</td><td><span style="float: right;">{{story.labels}}</span></td></tr>
+      <tr><td><a href="#">{{story.name}}</a> {%if story.owner%}({{story.owner}}){%endif%}</td><td><span style="float: right;">{{story.labels}}</span></td></tr>
       {% endfor %}
     </table>
   </body>
