@@ -29,7 +29,7 @@ from xml.dom import minidom
 import xml.parsers.expat
 import xml.sax.saxutils
 
-DEFAULT_BASE_API_URL = 'https://www.pivotaltracker.com/services/v2/'
+DEFAULT_BASE_API_URL = 'https://www.pivotaltracker.com/services/v3/'
 # Some fields specify UTC, some GMT?
 _TRACKER_DATETIME_RE = re.compile(r'^\d{4}/\d{2}/\d{2} .*(GMT|UTC)$')
 
@@ -230,7 +230,7 @@ class HostedTrackerAuth(TrackerAuth):
 
   def EstablishAuthToken(self, opener):
     """Returns the first auth token returned by /services/tokens/active."""
-    url = 'https://www.pivotaltracker.com/services/tokens/active'
+    url = 'https://www.pivotaltracker.com/services/v3/tokens/active'
     data = urllib.urlencode((('username', self.username),
                              ('password', self.password)))
     try:
